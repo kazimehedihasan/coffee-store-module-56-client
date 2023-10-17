@@ -9,6 +9,15 @@ const Navebar = () => {
       <li>
       <NavLink to="/addCoffee">AddCoffee</NavLink>
       </li>
+      <li>
+      <NavLink to="/signup">Sign Up</NavLink>
+      </li>
+      <li>
+      <NavLink to="/signin">login</NavLink>
+      </li>
+      <li>
+      <NavLink to="/users">users</NavLink>
+      </li>
       
      
     </>

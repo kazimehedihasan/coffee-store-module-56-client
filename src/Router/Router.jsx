@@ -3,6 +3,9 @@ import Layot from "./Layot";
 import Home from "../components/Home/Home";
 import AddCoffee from "../components/AddCoffee/AddCoffee";
 import UpdateCoffee from "../components/UpdateCoffee/UpdateCoffee";
+import SingUp from "../components/UpdateCoffee/SingUp";
+import Signin from "../components/Signin";
+import Users from "../components/Users";
 
 const Router = createBrowserRouter([
   {
@@ -24,6 +27,19 @@ const Router = createBrowserRouter([
         element: <UpdateCoffee />,
         loader: ({params}) => fetch(`http://localhost:5000/coffee/${params.id}`)
       },
+      {
+        path: '/signup',
+        element: <SingUp/>
+      },
+      {
+        path: '/Signin',
+        element: <Signin/>
+      },
+      {
+        path: '/users',
+        element: <Users/>,
+        loader: () => fetch('http://localhost:5000/user')
+      }
     ],
   },
 ]);
